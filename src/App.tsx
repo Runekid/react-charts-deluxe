@@ -1,15 +1,16 @@
 import { useState } from "react";
+import { AppFormFactory, Charts } from "./components/AppFormFactory";
 
 
 export function App() {
-  const [page, setPage] = useState<string>('home');
+  const [page, setPage] = useState<Charts>('home');
 
   return (
     <div className="App">
       <Header setPage={setPage} />
       <div className="container" style={{paddingTop: 36, paddingBottom: 36}}>
         <div className="row">
-          <div>{page}</div>
+          <AppFormFactory page={page} />
         </div>
       </div>
     </div>
@@ -18,7 +19,7 @@ export function App() {
 
 
 type HeaderProps = {
-  setPage: (page: string) => void;
+  setPage: (page: Charts) => void;
 }
 
 function Header({setPage}: HeaderProps) {
