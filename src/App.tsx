@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AppFormFactory, Charts } from "./components/AppFormFactory";
 
+import "./styles.css";
 
 export function App() {
   const [page, setPage] = useState<Charts>('home');
