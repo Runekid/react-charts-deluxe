@@ -1,7 +1,8 @@
 import { Home } from "../pages/Home";
+import { Sample } from "../pages/Sample";
 
 
-export type Charts = 'home' | 'sample-card';
+export type Charts = 'home' | 'sample';
 
 
 type AppFormFactoryProps = {
@@ -20,8 +21,8 @@ export function AppFormFactory({ page }: AppFormFactoryProps) {
 
 function ComponentFactory({ page }: AppFormFactoryProps) {
   switch (page) {
-  case 'sample-card':
-    return <div>temp</div>;
+  case 'sample':
+    return <Sample />;
 
   case 'home':
   default:

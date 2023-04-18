@@ -11,7 +11,7 @@ export const Person: React.FC<Props> = ({ person, removePerson }) => {
   const dispatch: Dispatch<any> = useDispatch()
 
   const deletePerson = React.useCallback(
-    (article: IPerson) => dispatch(removePerson(article)),
+    (person: IPerson) => dispatch(removePerson(person)),
     [dispatch, removePerson]
   )
 
